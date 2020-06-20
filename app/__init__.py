@@ -4,6 +4,7 @@ import os
 from flask import Flask, request, current_app
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
+<<<<<<< HEAD
 from flask_login import LoginManager
 from flask_mail import Mail
 from flask_bootstrap import Bootstrap
@@ -23,6 +24,14 @@ mail = Mail()
 bootstrap = Bootstrap()
 moment = Moment()
 babel = Babel()
+=======
+from config import Config
+
+app = Flask(__name__)
+app.config.from_object(Config)
+db = SQLAlchemy(app)
+migrate = Migrate(app, db)
+>>>>>>> parent of 8120e78... Chapter 5: User Logins (v0.5)
 
 
 def create_app(config_class=Config):
