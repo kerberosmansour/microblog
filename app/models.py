@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import base64
 from datetime import datetime, timedelta
 from hashlib import md5
@@ -68,6 +69,10 @@ from app import db
 db.event.listen(db.session, 'before_commit', SearchableMixin.before_commit)
 db.event.listen(db.session, 'after_commit', SearchableMixin.after_commit)
 
+=======
+from datetime import datetime
+from app import db
+>>>>>>> parent of 8120e78... Chapter 5: User Logins (v0.5)
 
 class PaginatedAPIMixin(object):
     @staticmethod
@@ -92,6 +97,7 @@ class PaginatedAPIMixin(object):
         }
         return data
 
+<<<<<<< HEAD
 =======
 from datetime import datetime
 from app import db
@@ -107,6 +113,9 @@ followers = db.Table(
 <<<<<<< HEAD
 
 class User(UserMixin, PaginatedAPIMixin, db.Model):
+=======
+class User(db.Model):
+>>>>>>> parent of 8120e78... Chapter 5: User Logins (v0.5)
 =======
 class User(db.Model):
 >>>>>>> parent of 8120e78... Chapter 5: User Logins (v0.5)
@@ -144,6 +153,7 @@ class User(db.Model):
     def __repr__(self):
         return '<User {}>'.format(self.username)
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -269,6 +279,8 @@ class User(db.Model):
 def load_user(id):
     return User.query.get(int(id))
 
+=======
+>>>>>>> parent of 8120e78... Chapter 5: User Logins (v0.5)
 =======
 >>>>>>> parent of 8120e78... Chapter 5: User Logins (v0.5)
 =======

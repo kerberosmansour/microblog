@@ -7,6 +7,7 @@ from flask_migrate import Migrate
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 from flask_login import LoginManager
 from flask_mail import Mail
 from flask_bootstrap import Bootstrap
@@ -31,12 +32,15 @@ babel = Babel()
 >>>>>>> parent of 8120e78... Chapter 5: User Logins (v0.5)
 =======
 >>>>>>> parent of 8120e78... Chapter 5: User Logins (v0.5)
+=======
+>>>>>>> parent of 8120e78... Chapter 5: User Logins (v0.5)
 from config import Config
 
 app = Flask(__name__)
 app.config.from_object(Config)
 db = SQLAlchemy(app)
 migrate = Migrate(app, db)
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> parent of 8120e78... Chapter 5: User Logins (v0.5)
@@ -112,6 +116,8 @@ def create_app(config_class=Config):
 def get_locale():
     return request.accept_languages.best_match(current_app.config['LANGUAGES'])
 
+=======
+>>>>>>> parent of 8120e78... Chapter 5: User Logins (v0.5)
 =======
 >>>>>>> parent of 8120e78... Chapter 5: User Logins (v0.5)
 =======
