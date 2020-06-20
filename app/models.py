@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import base64
 from datetime import datetime, timedelta
 from hashlib import md5
@@ -15,6 +16,10 @@ import rq
 from app import db, login
 from app.search import add_to_index, remove_from_index, query_index
 
+=======
+from datetime import datetime
+from app import db
+>>>>>>> parent of 8120e78... Chapter 5: User Logins (v0.5)
 
 class SearchableMixin(object):
     @classmethod
@@ -53,6 +58,7 @@ from datetime import datetime
 from app import db
 >>>>>>> parent of 8120e78... Chapter 5: User Logins (v0.5)
 
+<<<<<<< HEAD
     @classmethod
     def reindex(cls):
         for obj in cls.query:
@@ -107,6 +113,9 @@ class User(db.Model):
 =======
 class User(db.Model):
 >>>>>>> parent of 8120e78... Chapter 5: User Logins (v0.5)
+=======
+class User(db.Model):
+>>>>>>> parent of 8120e78... Chapter 5: User Logins (v0.5)
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(64), index=True, unique=True)
     email = db.Column(db.String(120), index=True, unique=True)
@@ -135,6 +144,7 @@ class User(db.Model):
     def __repr__(self):
         return '<User {}>'.format(self.username)
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     def set_password(self, password):
@@ -259,6 +269,8 @@ class User(db.Model):
 def load_user(id):
     return User.query.get(int(id))
 
+=======
+>>>>>>> parent of 8120e78... Chapter 5: User Logins (v0.5)
 =======
 >>>>>>> parent of 8120e78... Chapter 5: User Logins (v0.5)
 =======
