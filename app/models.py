@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import base64
 from datetime import datetime, timedelta
 from hashlib import md5
@@ -47,6 +48,10 @@ class SearchableMixin(object):
             if isinstance(obj, SearchableMixin):
                 remove_from_index(obj.__tablename__, obj)
         session._changes = None
+=======
+from datetime import datetime
+from app import db
+>>>>>>> parent of 8120e78... Chapter 5: User Logins (v0.5)
 
     @classmethod
     def reindex(cls):
@@ -86,6 +91,7 @@ from datetime import datetime
 from app import db
 >>>>>>> parent of 8120e78... Chapter 5: User Logins (v0.5)
 
+<<<<<<< HEAD
 followers = db.Table(
     'followers',
     db.Column('follower_id', db.Integer, db.ForeignKey('user.id')),
@@ -95,6 +101,9 @@ followers = db.Table(
 <<<<<<< HEAD
 
 class User(UserMixin, PaginatedAPIMixin, db.Model):
+=======
+class User(db.Model):
+>>>>>>> parent of 8120e78... Chapter 5: User Logins (v0.5)
 =======
 class User(db.Model):
 >>>>>>> parent of 8120e78... Chapter 5: User Logins (v0.5)
@@ -126,6 +135,7 @@ class User(db.Model):
     def __repr__(self):
         return '<User {}>'.format(self.username)
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     def set_password(self, password):
         self.password_hash = generate_password_hash(password)
@@ -249,6 +259,8 @@ class User(db.Model):
 def load_user(id):
     return User.query.get(int(id))
 
+=======
+>>>>>>> parent of 8120e78... Chapter 5: User Logins (v0.5)
 =======
 >>>>>>> parent of 8120e78... Chapter 5: User Logins (v0.5)
 
